@@ -7,6 +7,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div class = "Header">
+		<!-- Logo -->
+		<img alt="" src=""> 
+		<!-- Nav Bar -->
+		<div>
+			<div>
+				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
+			</div>
+			<div class="Navbar">
+				<a href="">Home</a>
+				<a href="">Produce</a>
+				<a href="">About Us</a>
+				<a href="">Partners</a>
+				<a href="">Store</a>
+			</div>
+		</div>
+		
+		<!-- Donation Img -->
+		<img alt="" src=""> 
+	</div>
 </body>
 </html>
