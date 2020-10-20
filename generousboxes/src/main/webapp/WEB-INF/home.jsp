@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +14,16 @@
 		<img alt="" src=""> 
 		<!-- Nav Bar -->
 		<div>
-			<div>
-				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
-			</div>
+			<c:if test="${LOGGED IN IS TRUE }">
+				<div>
+					Hello, ${User.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				</div>
+			</c:if>
+			<c:if test="${LOGGED IN IS FALSE }"> 
+				<div>
+					<a href="/login">Login</a> | <a href="/register">Sign Up</a>
+				</div>
+			</c:if>
 			<div class="Navbar">
 				<a href="">Home</a>
 				<a href="">Produce</a>
@@ -29,7 +37,7 @@
 		
 		
 	</div>
-	<div class="ProduceSection">
+	<div class="firstSection">
 		<!-- Generic Produce Picture -->
 		<img alt="" src="">
 		<!-- button to go to produce section -->
@@ -62,10 +70,6 @@
 		<div class = "image stubs">
 			<img alt="" src="">
 			<a href="">Github</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="" src="">
-			<a href="">Patreon</a>
 		</div>
 	</div>
 

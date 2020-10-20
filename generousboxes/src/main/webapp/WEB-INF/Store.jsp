@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +14,16 @@
 		<img alt="" src=""> 
 		<!-- Nav Bar -->
 		<div>
-			<div>
-				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
-			</div>
+			<c:if test="${LOGGED IN IS TRUE }">
+				<div>
+					Hello, ${User.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				</div>
+			</c:if>
+			<c:if test="${LOGGED IN IS FALSE }"> 
+				<div>
+					<a href="/login">Login</a> | <a href="/register">Sign Up</a>
+				</div>
+			</c:if>
 			<div class="Navbar">
 				<a href="">Home</a>
 				<a href="">Produce</a>
@@ -27,6 +35,56 @@
 		
 		<!-- Donation Img -->
 		<img alt="" src=""> 
+	</div>
+	
+	<div class="StoreItems">
+		<div class="item">
+			<img alt="" src="">
+			Produce Box
+			Description: lorem
+			Cost
+		</div>
+		<div class="item">
+			<img alt="" src="">
+			Everything Box
+			Description: lorem
+			Cost
+		</div>
+		<div class="item">
+			<img alt="" src="">
+			Protein Box
+			Description: lorem
+			Cost
+		</div>
+		<div class="item">
+			<img alt="" src="">
+			Dairy Box
+			Description: lorem
+			Cost
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class = "image stubs">
+			<img alt="" src="">
+			<a href="">Instagram</a>
+		</div>
+		<div class = "image stubs">
+			<img alt="" src="">
+			<a href="">Twitter</a>
+		</div>
+		<div class = "image stubs">
+			<img alt="" src="">
+			<a href="">Facebook</a>
+		</div>
+		<div class = "image stubs">
+			<img alt="" src="">
+			<a href="">Pintrest</a>
+		</div>
+		<div class = "image stubs">
+			<img alt="" src="">
+			<a href="">Github</a>
+		</div>
 	</div>
 	
 </body>
