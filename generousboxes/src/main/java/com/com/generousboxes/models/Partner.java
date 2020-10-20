@@ -1,5 +1,6 @@
 package com.com.generousboxes.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -53,19 +54,23 @@ public class Partner {
 	
 	private Boolean subscription;
 	
+	private double subAmount;
+	
 	public Partner() {
 		super();
 	}
 	
 	public Partner(String firstName, String lastName,
 				String email, String password,
-				String passwordConfirmation, Boolean subscription) {
+				String passwordConfirmation, Boolean subscription, double subAmount) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.passwordConfirmation = passwordConfirmation;
 		this.subscription = subscription;
+		this.subAmount = subAmount;
+		this.donations = new ArrayList<Donation>();
 	}
 	
 	@PrePersist

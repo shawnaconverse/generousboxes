@@ -7,7 +7,9 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.com.generousboxes.models.Order;
 import com.com.generousboxes.models.User;
+import com.com.generousboxes.repos.OrderRepo;
 import com.com.generousboxes.repos.UserRepo;
 
 @Service
@@ -15,13 +17,16 @@ public class UserService {
 	@Autowired
 	private UserRepo userRepo;
 	
+	@Autowired
+	private OrderRepo orderRepo;
+	
 	public User registerUser(User user) {
 		String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 		user.setPassword(hashed);
 		return userRepo.save(user);
 	}
 	
-	public List<User> findAll() {
+	public List<User> findAllUsers() {
 		return userRepo.findAll();
 	}
 	
@@ -50,5 +55,43 @@ public class UserService {
 				return false;
 			}
 		}
+	}
+	
+	public User addOrder(Long id, Order o) {
+		User u = findUserById(id);
+		List<Order> orders = u.getOrders();
+		orders.add(o);
+		u.setOrders(orders);
+		return userRepo.save(u);
+	}
+	
+	public List<Order> findAllOrders() {
+		return orderRepo.findAll();
+	}
+	
+	public Order findOrderById(Long id) {
+		Optional<Order> o = orderRepo.findById(id);
+		
+		if (o.isPresent()) {
+			return o.get();
+		} else {
+			return null;
+		}
+	}
+	
+	public Order createOrder(Order o) {
+		return orderRepo.save(o);
+	}
+	
+	public Order updateOrder(Long id, Order o) {
+		Order order = findOrderById(id);
+		order.setBoxType(o.getBoxType());
+		order.setBoxCount(o.getBoxCount());
+		order.setSubscription(o.getSubscription());
+		return orderRepo.save(order);
+	}
+	
+	public void deleteOrder(Long id) {
+		orderRepo.deleteById(id);
 	}
 }

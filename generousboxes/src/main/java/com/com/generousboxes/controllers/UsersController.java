@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.com.generousboxes.models.Order;
 import com.com.generousboxes.models.User;
 import com.com.generousboxes.services.UserService;
 import com.com.generousboxes.validators.UserValidator;
@@ -19,33 +20,19 @@ import com.com.generousboxes.validators.UserValidator;
 @Controller
 public class UsersController {
 	@Autowired
-	private UserService api;
+	private UserService userService;
 	
 	@Autowired
 	private UserValidator uValidator;
 	
-	private String[] allStates  = {"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI","ID", "IL", "IN", "IA", "KS", 
-			"KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
-			"OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"};
-	
-	@GetMapping("/")
-	public String index(HttpSession session) {
-		if (session.getAttribute("uuid") == null) {
-			return "redirect:/login";
-		} else {
-			return "redirect:/home";
-		}
-	}
-	
 	@GetMapping("/login")
 	public String loginPage() {
-		return "login/login.jsp";
+		return "user_login.jsp";
 	}
 	
 	@GetMapping("/registration")
 	public String registrationPage(@ModelAttribute("user") User u, Model model) {
-		model.addAttribute("states", this.allStates);
-		return "login/registration.jsp";
+		return "user_registration.jsp";
 	}
 	
 	@PostMapping("/registration")
@@ -55,10 +42,9 @@ public class UsersController {
 								Model model) {
 		uValidator.validate(user, result);
 		if (result.hasErrors()) {
-			model.addAttribute("states", this.allStates);
-			return "login/registration.jsp";
+			return "user_registration.jsp";
 		} else {
-			User registeredUser = api.registerUser(user);
+			User registeredUser = userService.registerUser(user);
 			session.setAttribute("uuid", registeredUser.getId());
 			return "redirect:/home";
 		}
@@ -69,30 +55,59 @@ public class UsersController {
 			@RequestParam("password") String password,
 							Model model,
 							HttpSession session) {
-		if (!api.authenticateUser(email, password)) {
+		if (!userService.authenticateUser(email, password)) {
 			model.addAttribute("error", "Invalid login!");
-			return "login/login.jsp";
+			return "user_login.jsp";
 		} else {
-			User user = api.findByEmail(email);
+			User user = userService.findByEmail(email);
 			session.setAttribute("uuid", user.getId());
 			return "redirect:/home";
 		}
 		
 	}
 	
-	// Main exit method from UserController to other controllers
-	@GetMapping("/home")
-	public String home(HttpSession session, Model model) {
-		if (session.getAttribute("uuid") == null) {
-			return "redirect:/login";
-		} else {
-			return "redirect:/tasks";
-		}
-	}
-	
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.setAttribute("uuid", null);
-		return "redirect:/login";
+		return "redirect:/home";
 	}
+	
+	
+	@GetMapping("/orders")
+	public String orders(HttpSession session, Model model) {
+		if (session.getAttribute("uuid") == null) {
+			return "redirect:/home";
+		} else {
+			Long uuid = (Long) session.getAttribute("uuid");
+			User u = userService.findUserById(uuid);
+			model.addAttribute("user", u);
+			return "orders.jsp";
+		}		
+	}
+	
+	@PostMapping("/orders")
+	public String orders(@Valid @ModelAttribute("order") Order o, BindingResult result, HttpSession session) {
+		if (result.hasErrors()) {
+			return "new_order.jsp";
+		} else {
+			Long uuid = (Long) session.getAttribute("uuid");
+			Order order = userService.createOrder(o);
+			userService.addOrder(uuid, order);
+			return "redirect:/orders";
+		}
+	}
+	
+	@GetMapping("/orders/new")
+	public String newOrder(@ModelAttribute("order") Order o, HttpSession session, Model model) {
+		if (session.getAttribute("uuid") == null) {
+			return "redirect:/home";
+		} else {
+			Long uuid = (Long) session.getAttribute("uuid");
+			User u = userService.findUserById(uuid);
+			model.addAttribute("user", u);
+			return "new_order.jsp";
+		}
+	}
+	
+	
 }

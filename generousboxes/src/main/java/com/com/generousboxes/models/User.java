@@ -34,6 +34,21 @@ public class User {
 	@Size(min=2, message="Last Name must be at least 2 characters.")
 	private String lastName;
 	
+	@Size(min=2)
+	private int streetNumber;
+	
+	@Size(min=2)
+	private String street;
+	
+	@Size(min=2)
+	private String city;
+	
+	@Size(max=5)
+	private String state;
+	
+	@Size(max=5)
+	private int zipCode;
+	
 	@Email(message="Email must be valid.")
 	private String email;
 	
@@ -53,24 +68,25 @@ public class User {
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 	private List<Order> orders;
 	
-	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Address shippingAddress;
-	
-	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Address billingAddress;
-	
 	public User() {
 		super();
 	}
 	
 	public User(String firstName, String lastName,
 				String email, String password,
-				String passwordConfirmation) {
+				String passwordConfirmation, int number, 
+				String street, String city, 
+				String state, int zipCode) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.passwordConfirmation = passwordConfirmation;
+		this.streetNumber = number;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
 	}
 	
 	@PrePersist
@@ -146,4 +162,54 @@ public class User {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+
+	public List<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
+	}
+
+	public int getStreetNumber() {
+		return streetNumber;
+	}
+
+	public void setStreetNumber(int streetNumber) {
+		this.streetNumber = streetNumber;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public int getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(int zipCode) {
+		this.zipCode = zipCode;
+	}
+	
+	
 }
