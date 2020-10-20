@@ -10,7 +10,7 @@
 <body>
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="" src=""> 
+		<img alt="farmer-box" src="Farmer-box.jpg"> 
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,23 +65,23 @@
 	</div>
 	<div class="footer">
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="instagram" src="instagram-logo.png">
 			<a href="">Instagram</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="twitter" src="twitter.png">
 			<a href="">Twitter</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="facebook" src="facebook.jpg">
 			<a href="">Facebook</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="pintrest" src="pintrest.jpg">
 			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="github" src="github.png">
 			<a href="">Github</a>
 		</div>
 	</div>

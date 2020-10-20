@@ -11,7 +11,7 @@
 	
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="" src=""> 
+		<img alt="open-box" src="open-box.jpg"> 
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,51 +63,50 @@
 	
 	<div class="StoreItems">
 		<div class="item">
-			<img alt="" src="">
+			<img alt="produce-box" src="produce-box.jpg">
 			Produce Box
 			Description: lorem
-			Cost
+			Cost:
 		</div>
 		<div class="item">
-			<img alt="" src="">
+			<img alt="fresh-box" src="fresh-box.jpg">
 			Everything Box
 			Description: lorem
-			Cost
+			Cost:
 		</div>
 		<div class="item">
-			<img alt="" src="">
-			Protein Box
+			<img alt="fresh-food" src="fresh-food.jpg">
+			Protein Box (Meat Only)
 			Description: lorem
-			Cost
+			Cost:
 		</div>
 		<div class="item">
-			<img alt="" src="">
+			<img alt="dairy-products" src="dair-products.png">
 			Dairy Box
 			Description: lorem
-			Cost
+			Cost:
 		</div>
 	</div>
 	
 	<div class="footer">
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="instagram" src="instagram-logo.png">
 			<a href="">Instagram</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="twitter" src="twitter.png">
 			<a href="">Twitter</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="facebook" src="facebook.jpg">
 			<a href="">Facebook</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="" src="">
+			<img alt="pintrest" src="pintrest.jpg">
 			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
-		
-			<img alt="" src="">
+			<img alt="github" src="github.png">
 			<a href="">Github</a>
 		</div>
 	</div>
