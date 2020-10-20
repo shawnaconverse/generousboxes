@@ -35,7 +35,10 @@
 		<!-- Donation Img -->
 		<img alt="" src=""> 
 	</div>
-	
+	<div>
+	<h2>Our Mission</h2>
+	<p>Every year, millions of families go hungry each day in America. .....</p>
+	</div>
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="" src="">

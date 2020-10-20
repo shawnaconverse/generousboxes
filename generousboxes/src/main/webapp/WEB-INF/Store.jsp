@@ -82,6 +82,7 @@
 			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
+		
 			<img alt="" src="">
 			<a href="">Github</a>
 		</div>

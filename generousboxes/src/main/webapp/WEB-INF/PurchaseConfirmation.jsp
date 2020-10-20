@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,20 +29,22 @@
 				<a href="">Partners</a>
 				<a href="">Store</a>
 			</div>
+			<!-- Donation Img -->
+			<img alt="" src=""> 	
 		</div>
 		
-		<!-- Donation Img -->
-		<img alt="" src=""> 
+		
 	</div>
 	
-	<div class="firstSection">
-	<img alt="" src="">
+	
+	<div >
+		<h2>Your order has been received, ${User.name}</h2>
+		Your shipment of 
+		<!-- list of items -->
+		Your confimration Number is ........
 	</div>
 	
-	<div>
-<!-- 	DONATION OPTION HERE -->
-	</div>
-	
+		<!--footer section -->
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="" src="">
