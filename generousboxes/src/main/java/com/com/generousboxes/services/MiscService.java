@@ -28,6 +28,10 @@ public class MiscService {
 		}
 	}
 	
+	public Charity createCharity(Charity c) {
+		return charityRepo.save(c);
+	}
+	
 	public Charity updateCharity(Long id, Charity c) {
 		Charity charity = findCharityById(id);
 		charity.setName(c.getName());
