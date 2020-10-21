@@ -16,7 +16,7 @@
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#">Navbar</a>
+	<a class="navbar-brand" href="/home">Generous Boxes</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -58,21 +58,30 @@
 			
 	</div>
 </nav>	
-<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
-		</div>
+	<div style="width:100%;height:400px;">
+  		<img alt="happy-boxes" src="Pictures/happy-boxes.jpg" style="float:left;width:60%;height:100%;object-fit:cover;">
+  		<img alt="farmer-box" src="Pictures/farmer-box.jpg" style="float:left;width:40%;height:100%;object-fit:cover;">
+	</div>
+</div>
 		
 		<!-- Donation Img -->
-		<img alt="" src="Pictures/"> 
-	</div>
 	<div class = "aboutUsText">
-	<h2>Our Mission</h2>
-	<p>Even in the worlds greatest food-producing nation, children and adults face poverty and hunger in every county across America.</p>
-
-<ul><p>In 2019, 34 million people lived in poverty in America. Four a family of four, that means earning just $25,000 per year.</p></ul>
-<ul><p>Before the coronavirus pandemic, more than 35 million people struggled with hunger in the United States, including more than 10 million children.</p></ul>
-<ul><p>A household that is food insecure has limited or uncertain access to enough food to support a healthy life.</p></ul>
-<ul><p>Children are more likely to face food insecurity than any other group in the United States.</p> </ul>
-<ul><p>The coronavirus pandemic has left millions of families without stable employment. More than 54 million people, including 18 million children, may experience food insecurity in 2020.</p></ul>
+		<div>
+			<h1>Our Mission</h1>
+			<h4>Hungry Affects Millions</h4>
+			<ul><p>Even in the worlds greatest food-producing nation, children and adults face poverty and hunger in every county across America.</ul></p>
+			<ul><p>In 2019, 34 million people lived in poverty in America. Four a family of four, that means earning just $25,000 per year.</p></ul>
+			<ul><p>Before the coronavirus pandemic, more than 35 million people struggled with hunger in the United States.</p></ul>
+			<ul><p>A household that is food insecure has limited or uncertain access to enough food to support a healthy life.</p></ul>
+			<h4>We have sustainable solutions</h4>
+			<ul><p>Partnering with local groups and green companies to provide healthy alternatives.</p></ul>	
+			<ul><p>Free delivery to needy families across the country.</p></ul>
+			<ul><p>Fresh produce from farms for cheaper pricing and healthier meals.</p></ul>
+			<ul><p></ul>
+		</div>
+		<div style="width:50%;height:450px;">
+  			<img alt="dairy-products" src="Pictures/dairy-products.jpg" style="float:right;width:90%;height:100%;object-fit:cover;">
+		</div>
 	</div>
 	<div class="footer">
 		<div class = "image stubs">
