@@ -10,9 +10,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+	
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="farmer-box" src="Pictures/Farmer-box.jpg"> 
+		<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,48 +24,71 @@
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 	  <ul class="navbar-nav">
 	    <li class="nav-item active">
-	      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#">Features</a>
+	      <a class="nav-link" href="/donations">Donations</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#">Pricing</a>
+	      <a class="nav-link" href="/partners">Partners</a>
 	    </li>
-	    <li class="nav-item dropdown">
-	      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	        Dropdown link
-	      </a>
-	      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	        <a class="dropdown-item" href="#">Action</a>
-	        <a class="dropdown-item" href="#">Another action</a>
-	        <a class="dropdown-item" href="#">Something else here</a>
-	      </div>
+	    <li class="nav-item">
+	      <a class="nav-link" href="/aboutus">About Us</a>
 	    </li>
 	  </ul>
 	</div>
 	<div>
-		<c:if test="${LOGGED IN IS TRUE }">
+		<c:if test="${user != null}">
 			<div>
-				Hello, ${User.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
-		<c:if test="${LOGGED IN IS FALSE }"> 
+		<c:if test="${partner != null }"> 
+			<div>
+				Hello, ${partner.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+			</div>
+		</c:if>	
+		<c:if test="${partner == null && user == null}"> 
 			<div>
 				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
 			</div>
-		</c:if>		
+		</c:if>
+			
 	</div>
-</nav>
+</nav>	
 		</div>
 		
 		<!-- Donation Img -->
-		<img alt="" src="Pictures/"> 
+		<img alt="Donate" src="Pictures/donate-button.png"> 
 	</div>
-	<div>
-	<h2>Our Mission</h2>
-	<p>Every year, millions of families go hungry each day in America. .....</p>
+	
+	<div class="StoreItems">
+		<div class="item">
+			<img alt="produce-box" src="Pictures/produce-box.jpg">
+			Produce Box
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="fresh-box" src="Pictures/fresh-box.jpg">
+			Everything Box
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="fresh-food" src="Pictures/fresh-food.jpg">
+			Protein Box (Meat Only)
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="dairy-products" src="Pictures/dair-products.png">
+			Dairy Box
+			Description: lorem
+			Cost:
+		</div>
 	</div>
+	
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="instagram" src="Pictures/instagram-logo.png">
@@ -87,5 +111,6 @@
 			<a href="">Github</a>
 		</div>
 	</div>
+	
 </body>
 </html>
