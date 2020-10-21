@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
+
 html,body{
 font-family: 'Numans', sans-serif;
 }
@@ -12,7 +13,6 @@ align-content: center;
 }
 
 .card{
-z-index: 0;
 height: 370px;
 margin-top: auto;
 margin-bottom: auto;
@@ -71,7 +71,7 @@ margin-right: 5px;
 	position: absolute;
     left: 0px;
     top: 0px;
-    z-index: -1;
+    z-index: -2;
     align-self: center;
 }
 
