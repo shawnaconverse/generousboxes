@@ -1,22 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Generous Boxes</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<div class = "Header">
-		<!-- Logo -->
-		
-		<!-- Nav Bar -->
-<div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="/home">Generous Boxes</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -55,58 +51,64 @@
 			
 	</div>
 </nav>	
-	<div style="width:100%;height:650px;">
-  		<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg" style="float:left;width:100%;height:100%;object-fit:cover;">
-	</div>
-</div>
-	<div class="firsttextarea">
-	<h3>A Step Forward to a Healthier Community</h3>
 	
-	<h5>The face of hunger of our communities is varied and includes the young and old alike along with hard-working parents who struggle to provide food for their families.</h5>
-	<h5>With any size <a href="/donations">donation</a> we are taking the next steps to solving hunger in our communties.</h5>
-	</div>
+	<div class="main container container-fluid">
+		<h2>Choose your box</h2>
 		
-	</div>
-	<div class="firstSection">
-	<div style="width:100%;height:500px;">
- 	   <img alt="farmer-box" src="Pictures/farmer-box.jpg" style="float:left;width:50%;height:100%;object-fit:cover;">
-  	   <img alt="fruit-box" src="Pictures/fruit-box.png" style="float:left;width:50%;height:100%;object-fit:cover;">
-	</div>
-	 
-		<!-- Generic Produce Picture -->
-		
-		<!-- button to go to produce section -->
-		
+		<form:form action="/orders" method="post" modelAttribute="order">
+			
+		</form:form>
 	</div>
 	
-	<div >
-		<!--Centered and in white section -->
-		
+	<div class="StoreItems">
+		<div class="item">
+			<img alt="produce-box" src="Pictures/produce-box.jpg">
+			Produce Box
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="fresh-box" src="Pictures/fresh-box.jpg">
+			Everything Box
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="fresh-food" src="Pictures/fresh-food.jpg">
+			Protein Box (Meat Only)
+			Description: lorem
+			Cost:
+		</div>
+		<div class="item">
+			<img alt="dairy-products" src="Pictures/dair-products.png">
+			Dairy Box
+			Description: lorem
+			Cost:
+		</div>
 	</div>
 	
-		<!--footer section -->
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a> |
+			<a href="">Instagram</a>
 		</div>
 		<div class = "image stubs">
 			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a> |
+			<a href="">Twitter</a>
 		</div>
 		<div class = "image stubs">
 			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a> |
+			<a href="">Facebook</a>
 		</div>
 		<div class = "image stubs">
 			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a> |
+			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
 			<img alt="github" src="Pictures/github.png">
 			<a href="">Github</a>
 		</div>
 	</div>
-
+	
 </body>
 </html>
