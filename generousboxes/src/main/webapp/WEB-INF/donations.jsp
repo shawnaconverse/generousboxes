@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Donations</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -52,7 +52,7 @@
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
 			<div>
-				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
+				<a href="/login">Login</a> | <a href="/registeration">Sign Up</a>
 			</div>
 		</c:if>
 			
