@@ -52,7 +52,7 @@
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
 			<div>
-				<a href="/login">Login</a> | <a href="/register">Sign Up</a>
+				<a href="/login">Login</a> | <a href="/registration">Sign Up</a>
 			</div>
 		</c:if>
 			
@@ -79,11 +79,6 @@
 		<!-- Generic Produce Picture -->
 		
 		<!-- button to go to produce section -->
-		
-	</div>
-	
-	<div >
-		<!--Centered and in white section -->
 		
 	</div>
 	
