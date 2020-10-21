@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
 font-family: 'Numans', sans-serif;
 }
 
@@ -16,6 +12,7 @@ align-content: center;
 }
 
 .card{
+z-index: 0;
 height: 370px;
 margin-top: auto;
 margin-bottom: auto;
@@ -67,6 +64,15 @@ width: 20px;
 height: 20px;
 margin-left: 15px;
 margin-right: 5px;
+}
+
+.loginpic {
+	width: 100%;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    align-self: center;
 }
 
 .login_btn{
