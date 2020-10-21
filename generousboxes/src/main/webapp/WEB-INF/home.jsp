@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Generous Boxes</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -14,9 +14,9 @@
 		<!-- Logo -->
 		
 		<!-- Nav Bar -->
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#">Navbar</a>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="/home">Generous Boxes</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -55,22 +55,33 @@
 			
 	</div>
 </nav>	
-<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
-		</div>
-		
+	<div style="width:100%;height:650px;">
+  		<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg" style="float:left;width:100%;height:100%;object-fit:cover;">
+	</div>
+</div>
+	<div class="firsttextarea">
+	<h3>A Step Forward to a Healthier Community</h3>
+	
+	<h5>The face of hunger of our communities is varied and includes the young and old alike along with hard-working parents who struggle to provide food for their families.</h5>
+	<h5>With any size <a href="/donations">donation</a> we are taking the next steps to solving hunger in our communties.</h5>
+	</div>
 		
 	</div>
 	<div class="firstSection">
-	<img alt="open-box" src="Pictures/open-box.jpg"> <img alt="fruit-box" src="Pictures/fruit-box.png"> 
+	<div style="width:100%;height:500px;">
+ 	   <img alt="farmer-box" src="Pictures/farmer-box.jpg" style="float:left;width:50%;height:100%;object-fit:cover;">
+  	   <img alt="fruit-box" src="Pictures/fruit-box.png" style="float:left;width:50%;height:100%;object-fit:cover;">
+	</div>
+	 
 		<!-- Generic Produce Picture -->
 		
 		<!-- button to go to produce section -->
-		<button>Check out our Produce</button>
+		
 	</div>
 	
 	<div >
 		<!--Centered and in white section -->
-		<button>Check out our fresh and healthy options</button>
+		
 	</div>
 	
 		<!--footer section -->
