@@ -65,7 +65,7 @@
 		<h2>Your order has been received, ${User.name}</h2>
 		Your shipment of 
 		<!-- list of items -->
-		Your confimration Number is ........
+		Your confimration Number is (NEED TO ADD DIGITS TO ID) ${user.id}
 	</div>
 	
 		<!--footer section -->
