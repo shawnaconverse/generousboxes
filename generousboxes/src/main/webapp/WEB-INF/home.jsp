@@ -82,11 +82,6 @@
 		
 	</div>
 	
-	<div >
-		<!--Centered and in white section -->
-		
-	</div>
-	
 		<!--footer section -->
 	<div class="footer">
 		<div class = "image stubs">

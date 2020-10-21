@@ -61,9 +61,15 @@
 		<!-- Donation Img -->
 		<img alt="" src="Pictures/"> 
 	</div>
-	<div>
+	<div class = "aboutUsText">
 	<h2>Our Mission</h2>
-	<p>Every year, millions of families go hungry each day in America. .....</p>
+	<p>Even in the worlds greatest food-producing nation, children and adults face poverty and hunger in every county across America.</p>
+
+<ul><p>In 2019, 34 million people lived in poverty in America. Four a family of four, that means earning just $25,000 per year.</p></ul>
+<ul><p>Before the coronavirus pandemic, more than 35 million people struggled with hunger in the United States, including more than 10 million children.</p></ul>
+<ul><p>A household that is food insecure has limited or uncertain access to enough food to support a healthy life.</p></ul>
+<ul><p>Children are more likely to face food insecurity than any other group in the United States.</p> </ul>
+<ul><p>The coronavirus pandemic has left millions of families without stable employment. More than 54 million people, including 18 million children, may experience food insecurity in 2020.</p></ul>
 	</div>
 	<div class="footer">
 		<div class = "image stubs">
