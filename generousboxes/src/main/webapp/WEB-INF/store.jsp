@@ -13,7 +13,7 @@
 	
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
+		
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,6 +56,7 @@
 			
 	</div>
 </nav>	
+<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
 		</div>
 		
 		<!-- Donation Img -->
