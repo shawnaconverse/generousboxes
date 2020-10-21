@@ -25,7 +25,7 @@
 	      <a class="nav-link" href="/orders">Orders</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="/partners">Partners</a>
+	      <a class="nav-link" href="/partners/donate">Partners</a>
 	    </li>
 	    <li class="nav-item">
 	      <a class="nav-link" href="/aboutus">About Us</a>

@@ -29,7 +29,7 @@
 	      <a class="nav-link" href="/orders">Orders</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="/partners">Partners</a>
+	      <a class="nav-link" href="/partners/donate">Partners</a>
 	    </li>
 	    <li class="nav-item">
 	      <a class="nav-link" href="/aboutus">About Us</a>
@@ -52,7 +52,7 @@
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
 			<div>
-				<a href="/login">Login</a> | <a href="/registration">Sign Up</a>
+				<a href="/login">Customer Login</a> | <a href="/partners/login">Partner Login</a>
 			</div>
 		</c:if>
 			

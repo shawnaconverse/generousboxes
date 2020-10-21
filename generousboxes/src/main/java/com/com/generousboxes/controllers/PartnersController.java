@@ -47,8 +47,8 @@ public class PartnersController {
 			return "partner_registration.jsp";
 		} else {
 			Partner registeredPartner = partnerService.registerPartner(partner);
-			session.setAttribute("uuid", registeredPartner.getId());
-			return "redirect:/home";
+			session.setAttribute("upid", registeredPartner.getId());
+			return "redirect:/partners/donate";
 		}
 	}
 	
@@ -62,15 +62,15 @@ public class PartnersController {
 			return "partner_login.jsp";
 		} else {
 			Partner partner = partnerService.findByEmail(email);
-			session.setAttribute("uuid", partner.getId());
-			return "redirect:/home";
+			session.setAttribute("upid", partner.getId());
+			return "redirect:/partners/donate";
 		}
 		
 	}
 	
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		session.setAttribute("uuid", null);
+		session.setAttribute("upid", null);
 		return "redirect:/home";
 	}
 	
@@ -80,9 +80,9 @@ public class PartnersController {
 			Long upid = (Long) session.getAttribute("upid");
 			Partner p = partnerService.findPartnerById(upid);
 			model.addAttribute("partner", p);
-			return "Donations.jsp";			
+			return "donations.jsp";			
 		} else {
-			return "redirect:/home";
+			return "redirect:/partners/login";
 		}
 	}
 	
