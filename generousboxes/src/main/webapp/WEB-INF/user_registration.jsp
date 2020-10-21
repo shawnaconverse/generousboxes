@@ -37,19 +37,19 @@
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <form:input path="firstname" class="form-control" placeholder="First Name" type="text"/>
+        <form:input path="firstName" class="form-control" placeholder="First Name" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <form:input path="lastname" class="form-control" placeholder="Last Name" type="text"/>
+        <form:input path="lastName" class="form-control" placeholder="Last Name" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 		 </div>
-        <form:input path="emailaddress" class="form-control" placeholder="Email address" type="email"/>
+        <form:input path="email" class="form-control" placeholder="Email address" type="email"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">

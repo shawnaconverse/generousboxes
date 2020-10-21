@@ -52,7 +52,7 @@
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
 			<div>
-				<a href="/login">Login</a> | <a href="/registeration">Sign Up</a>
+				<a href="/login">Login</a> | <a href="/registration">Sign Up</a>
 			</div>
 		</c:if>
 			
