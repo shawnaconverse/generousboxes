@@ -34,7 +34,6 @@ public class User {
 	@Size(min=2, message="Last Name must be at least 2 characters.")
 	private String lastName;
 	
-	@Size(min=2)
 	private int streetNumber;
 	
 	@Size(min=2)
@@ -46,7 +45,6 @@ public class User {
 	@Size(max=5)
 	private String state;
 	
-	@Size(max=5)
 	private int zipCode;
 	
 	@Email(message="Email must be valid.")
@@ -57,6 +55,8 @@ public class User {
 	
 	@Transient
 	private String passwordConfirmation;
+	
+	private Boolean subscription;
 	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -210,6 +210,12 @@ public class User {
 	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
 	}
-	
-	
+
+	public Boolean getSubscription() {
+		return subscription;
+	}
+
+	public void setSubscription(Boolean subscription) {
+		this.subscription = subscription;
+	}
 }

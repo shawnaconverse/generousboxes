@@ -10,12 +10,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<div class = "Header">
-		<!-- Logo -->
 	
-		<!-- Nav Bar -->
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="#">Navbar</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
@@ -42,12 +38,12 @@
 	<div>
 		<c:if test="${user != null}">
 			<div>
-				Hello, ${user.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
 		<c:if test="${partner != null }"> 
 			<div>
-				Hello, ${partner.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${partner.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
@@ -58,38 +54,55 @@
 			
 	</div>
 </nav>	
-<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
-		</div>
 	
-	<div class="firstSection">
-	<img alt="" src="Pictures/">
+<div class="main container container-fluid col-med-">
+	<div class="d-flex justify-content-between">
+		<a href="/orders/new">Place a new Order!</a>
+		<a href="/orders/cancel">Cancel current subscription</a>
 	</div>
 	
-	<div>
-<!-- 	DONATION OPTION HERE -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Box Type</th>
+				<th scope="col">Amount of Boxes</th>
+				<th scope="col">Date Ordered</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${user.getOrders()}" var="order">
+				<tr>
+					<td><c:out value="${order.getBoxType()}"/></td>
+					<td><c:out value="${order.getBoxCount()}"/></td>
+					<td><c:out value="${order.getCreatedAt()}"/></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+</div>
+
+<div class="footer">
+	<div class = "image stubs">
+		<img alt="instagram" src="Pictures/instagram-logo.png">
+		<a href="">Instagram</a>
 	</div>
+	<div class = "image stubs">
+		<img alt="twitter" src="Pictures/twitter.png">
+		<a href="">Twitter</a>
+	</div>
+	<div class = "image stubs">
+		<img alt="facebook" src="Pictures/facebook.jpg">
+		<a href="">Facebook</a>
+	</div>
+	<div class = "image stubs">
+		<img alt="pintrest" src="Pictures/pintrest.jpg">
+		<a href="">Pintrest</a>
+	</div>
+	<div class = "image stubs">
+		<img alt="github" src="Pictures/github.png">
+		<a href="">Github</a>
+	</div>
+</div>
 	
-	<div class="footer">
-		<div class = "image stubs">
-			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="github" src="Pictures/github.png">
-			<a href="">Github</a>
-		</div>
-	</div>
 </body>
 </html>

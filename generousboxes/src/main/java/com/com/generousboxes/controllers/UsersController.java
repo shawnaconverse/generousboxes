@@ -91,8 +91,10 @@ public class UsersController {
 			return "new_order.jsp";
 		} else {
 			Long uuid = (Long) session.getAttribute("uuid");
+			o.setUser(userService.findUserById(uuid));
 			Order order = userService.createOrder(o);
-			userService.addOrder(uuid, order);
+//			userService.addOrder(uuid, order);
+			userService.subscribe(uuid);
 			return "redirect:/orders";
 		}
 	}
@@ -109,5 +111,14 @@ public class UsersController {
 		}
 	}
 	
-	
+	@GetMapping("/orders/cancel")
+	public String cancelSub(HttpSession session) {
+		if (session.getAttribute("uuid") == null) {
+			return "redirect:/home";
+		} else {
+			Long uuid = (Long) session.getAttribute("uuid");
+			userService.unsubscribe(uuid);
+			return "redirect:/orders";
+		}
+	}
 }
