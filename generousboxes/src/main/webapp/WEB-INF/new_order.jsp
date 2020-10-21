@@ -56,7 +56,32 @@
 		<h2>Choose your box</h2>
 		
 		<form:form action="/orders" method="post" modelAttribute="order">
-			
+			<div class="card-deck">
+				<div class="card">
+					<img alt="produce-box" src="Pictures/fresh-VeggiesAndFruit.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Produce Box</h5>
+						<p class="card-text">A box of assorted fruits and vegetables</p>
+						<form:input type="radio" value="produce" path="boxType"/>
+					</div>
+				</div>
+				<div class="card">
+					<img alt="produce-box" src="Pictures/fresh-food.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Mix Box</h5>
+						<p class="card-text">A box with a mix of meats, dairy, and produce</p>
+						<form:input type="radio" value="mixed" path="boxType"/>
+					</div>
+				</div>
+				<div class="card">
+					<img alt="produce-box" src="Pictures/fresh-VeggiesAndFruit.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Meat and Dairy Box</h5>
+						<p class="card-text">A box of assorted meats and dairy</p>
+						<form:input type="radio" value="meat" path="boxType"/>
+					</div>
+				</div>
+			</div>
 		</form:form>
 	</div>
 	
