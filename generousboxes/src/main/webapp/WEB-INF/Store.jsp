@@ -6,12 +6,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 	
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="open-box" src="open-box.jpg"> 
+		<img alt="open-box" src="Pictures/open-box.jpg"> 
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,30 +60,30 @@
 		</div>
 		
 		<!-- Donation Img -->
-		<img alt="" src=""> 
+		<img alt="Donate" src="Pictures/donate-button.png"> 
 	</div>
 	
 	<div class="StoreItems">
 		<div class="item">
-			<img alt="produce-box" src="produce-box.jpg">
+			<img alt="produce-box" src="Pictures/produce-box.jpg">
 			Produce Box
 			Description: lorem
 			Cost:
 		</div>
 		<div class="item">
-			<img alt="fresh-box" src="fresh-box.jpg">
+			<img alt="fresh-box" src="Pictures/fresh-box.jpg">
 			Everything Box
 			Description: lorem
 			Cost:
 		</div>
 		<div class="item">
-			<img alt="fresh-food" src="fresh-food.jpg">
+			<img alt="fresh-food" src="Pictures/fresh-food.jpg">
 			Protein Box (Meat Only)
 			Description: lorem
 			Cost:
 		</div>
 		<div class="item">
-			<img alt="dairy-products" src="dair-products.png">
+			<img alt="dairy-products" src="Pictures/dair-products.png">
 			Dairy Box
 			Description: lorem
 			Cost:
@@ -90,23 +92,23 @@
 	
 	<div class="footer">
 		<div class = "image stubs">
-			<img alt="instagram" src="instagram-logo.png">
+			<img alt="instagram" src="Pictures/instagram-logo.png">
 			<a href="">Instagram</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="twitter" src="twitter.png">
+			<img alt="twitter" src="Pictures/twitter.png">
 			<a href="">Twitter</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="facebook" src="facebook.jpg">
+			<img alt="facebook" src="Pictures/facebook.jpg">
 			<a href="">Facebook</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="pintrest" src="pintrest.jpg">
+			<img alt="pintrest" src="Pictures/pintrest.jpg">
 			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="github" src="github.png">
+			<img alt="github" src="Pictures/github.png">
 			<a href="">Github</a>
 		</div>
 	</div>

@@ -5,11 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 	<div class = "Header">
 		<!-- Logo -->
-		<img alt="" src=""> 
+		<img alt="" src="Pictures/"> 
 		<!-- Nav Bar -->
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -69,23 +71,23 @@
 		<!--footer section -->
 	<div class="footer">
 		<div class = "image stubs">
-			<img alt="instagram" src="instagram-logo.png">
+			<img alt="instagram" src="Pictures/instagram-logo.png">
 			<a href="">Instagram</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="twitter" src="twitter.png">
+			<img alt="twitter" src="Pictures/twitter.png">
 			<a href="">Twitter</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="facebook" src="facebook.jpg">
+			<img alt="facebook" src="Pictures/facebook.jpg">
 			<a href="">Facebook</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="pintrest" src="pintrest.jpg">
+			<img alt="pintrest" src="Pictures/pintrest.jpg">
 			<a href="">Pintrest</a>
 		</div>
 		<div class = "image stubs">
-			<img alt="github" src="github.png">
+			<img alt="github" src="Pictures/github.png">
 			<a href="">Github</a>
 		</div>
 	</div>
