@@ -62,6 +62,22 @@ public class UserService {
 		List<Order> orders = u.getOrders();
 		orders.add(o);
 		u.setOrders(orders);
+		orders = u.getOrders();
+		for (int i = 0; i < orders.size(); i++) {
+			System.out.println(orders.get(i).getBoxType());
+		}
+		return userRepo.save(u);
+	}
+	
+	public User subscribe(Long id) {
+		User u = findUserById(id);
+		u.setSubscription(true);
+		return userRepo.save(u);
+	}
+	
+	public User unsubscribe(Long id) {
+		User u = findUserById(id);
+		u.setSubscription(false);
 		return userRepo.save(u);
 	}
 	
@@ -87,7 +103,6 @@ public class UserService {
 		Order order = findOrderById(id);
 		order.setBoxType(o.getBoxType());
 		order.setBoxCount(o.getBoxCount());
-		order.setSubscription(o.getSubscription());
 		return orderRepo.save(order);
 	}
 	

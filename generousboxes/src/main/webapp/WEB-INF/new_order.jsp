@@ -62,7 +62,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Produce Box</h5>
 						<p class="card-text">A box of assorted fruits and vegetables</p>
-						<form:input type="radio" value="produce" path="boxType"/>
+						<form:radiobutton value="produce" path="boxType"/>
 					</div>
 				</div>
 				<div class="card">
@@ -70,7 +70,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Mix Box</h5>
 						<p class="card-text">A box with a mix of meats, dairy, and produce</p>
-						<form:input type="radio" value="mixed" path="boxType"/>
+						<form:radiobutton value="mixed" path="boxType"/>
 					</div>
 				</div>
 				<div class="card">
@@ -78,39 +78,24 @@
 					<div class="card-body">
 						<h5 class="card-title">Meat and Dairy Box</h5>
 						<p class="card-text">A box of assorted meats and dairy</p>
-						<form:input type="radio" value="meat" path="boxType"/>
+						<form:radiobutton value="meat" path="boxType"/>
 					</div>
 				</div>
+				
 			</div>
+			<div>
+				<form:label path="boxCount">Amount of Boxes</form:label>
+				<form:select path="boxCount">
+					<form:option value="1">1</form:option>
+					<form:option value="2">2</form:option>
+					<form:option value="3">3</form:option>
+					<form:option value="4">4</form:option>
+				</form:select>
+			</div>
+			<button>Place Order!</button>
 		</form:form>
 	</div>
 	
-	<div class="StoreItems">
-		<div class="item">
-			<img alt="produce-box" src="Pictures/produce-box.jpg">
-			Produce Box
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="fresh-box" src="Pictures/fresh-box.jpg">
-			Everything Box
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="fresh-food" src="Pictures/fresh-food.jpg">
-			Protein Box (Meat Only)
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="dairy-products" src="Pictures/dair-products.png">
-			Dairy Box
-			Description: lorem
-			Cost:
-		</div>
-	</div>
 	
 	<div class="footer">
 		<div class = "image stubs">

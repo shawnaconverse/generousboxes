@@ -28,10 +28,7 @@ public class Order {
 	@NotNull
 	private String boxType;
 	
-	@Size(min=1)
 	private int boxCount;
-	
-	private Boolean subscription;
 	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -58,10 +55,9 @@ public class Order {
 		super();
 	}
 	
-	public Order(String boxType, int boxCount, Boolean sub) {
+	public Order(String boxType, int boxCount) {
 		this.boxType = boxType;
 		this.boxCount = boxCount;
-		this.subscription = sub;
 	}
 
 	public Long getId() {
@@ -86,14 +82,6 @@ public class Order {
 
 	public void setBoxCount(int boxCount) {
 		this.boxCount = boxCount;
-	}
-
-	public Boolean getSubscription() {
-		return subscription;
-	}
-
-	public void setSubscription(Boolean subscription) {
-		this.subscription = subscription;
 	}
 
 	public Date getCreatedAt() {

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,12 +35,12 @@
 	<div>
 		<c:if test="${user != null}">
 			<div>
-				Hello, ${user.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
 		<c:if test="${partner != null }"> 
 			<div>
-				Hello, ${partner.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${partner.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
@@ -52,6 +52,32 @@
 	</div>
 </nav>	
 	
+<div class="main container container-fluid col-med-">
+	<div class="d-flex justify-content-between">
+		<a href="/orders/new">Place a new Order!</a>
+		<a href="/orders/cancel">Cancel current subscription</a>
+	</div>
+	
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Box Type</th>
+				<th scope="col">Amount of Boxes</th>
+				<th scope="col">Date Ordered</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${user.getOrders()}" var="order">
+				<tr>
+					<td><c:out value="${order.getBoxType()}"/></td>
+					<td><c:out value="${order.getBoxCount()}"/></td>
+					<td><c:out value="${order.getCreatedAt()}"/></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+</div>
+
 <div class="footer">
 	<div class = "image stubs">
 		<img alt="instagram" src="Pictures/instagram-logo.png">
