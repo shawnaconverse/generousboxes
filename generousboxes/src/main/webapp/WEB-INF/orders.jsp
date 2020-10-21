@@ -11,12 +11,7 @@
 </head>
 <body>
 	
-	<div class = "Header">
-		<!-- Logo -->
-		
-		<!-- Nav Bar -->
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="#">Navbar</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
@@ -56,62 +51,29 @@
 			
 	</div>
 </nav>	
-<img alt="produce-shelves" src="Pictures/shelves-of-produce.jpg">
-		</div>
-		
-		<!-- Donation Img -->
-		<img alt="Donate" src="Pictures/donate-button.png"> 
-	</div>
 	
-	<div class="StoreItems">
-		<div class="item">
-			<img alt="produce-box" src="Pictures/produce-box.jpg">
-			Produce Box
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="fresh-box" src="Pictures/fresh-box.jpg">
-			Everything Box
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="fresh-food" src="Pictures/fresh-food.jpg">
-			Protein Box (Meat Only)
-			Description: lorem
-			Cost:
-		</div>
-		<div class="item">
-			<img alt="dairy-products" src="Pictures/dair-products.png">
-			Dairy Box
-			Description: lorem
-			Cost:
-		</div>
+<div class="footer">
+	<div class = "image stubs">
+		<img alt="instagram" src="Pictures/instagram-logo.png">
+		<a href="">Instagram</a>
 	</div>
-	
-	<div class="footer">
-		<div class = "image stubs">
-			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a>
-		</div>
-		<div class = "image stubs">
-			<img alt="github" src="Pictures/github.png">
-			<a href="">Github</a>
-		</div>
+	<div class = "image stubs">
+		<img alt="twitter" src="Pictures/twitter.png">
+		<a href="">Twitter</a>
 	</div>
+	<div class = "image stubs">
+		<img alt="facebook" src="Pictures/facebook.jpg">
+		<a href="">Facebook</a>
+	</div>
+	<div class = "image stubs">
+		<img alt="pintrest" src="Pictures/pintrest.jpg">
+		<a href="">Pintrest</a>
+	</div>
+	<div class = "image stubs">
+		<img alt="github" src="Pictures/github.png">
+		<a href="">Github</a>
+	</div>
+</div>
 	
 </body>
 </html>
