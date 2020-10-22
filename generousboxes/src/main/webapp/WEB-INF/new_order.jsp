@@ -64,7 +64,7 @@
 					<img class="card-img-top" alt="open-box" src="Pictures/open-box.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Produce Box</h5>
-						<p class="card-text">A box of assorted fruits and vegetables</p>
+						<p class="card-text">An assortment of meats and dairy</p>
 						<form:radiobutton value="produce" path="boxType"/>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 					<img class="card-img-top" alt="fresh-food" src="Pictures/fresh-food.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Mix Box</h5>
-						<p class="card-text">A box with a mix of meats, dairy, and produce</p>
+						<p class="card-text">A box of meats, dairy, and produce</p>
 						<form:radiobutton value="mixed" path="boxType"/>
 					</div>
 				</div>

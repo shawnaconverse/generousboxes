@@ -82,7 +82,7 @@
 					</div>
 					<div class="card-body">
 						<h5 class="card-title">Meat and Dairy Box</h5>
-						<p class="card-text">A box of assorted meats and dairy</p>
+						<p class="card-text">An assortment of meats and dairy</p>
 						<form:radiobutton value="meat" path="boxType"/>
 					</div>
 				</div>
