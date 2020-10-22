@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Orders</title>
+<title>Generous Boxes</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a class="navbar-brand" href="#">Navbar</a>
+	<a class="navbar-brand" href="/home">Generous Boxes</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -55,55 +54,53 @@
 			
 	</div>
 </nav>	
-	
-<div class="main container container-fluid col-med-">
-	<div class="d-flex justify-content-between">
-		<a href="/orders/new">Place a new Order!</a>
-		<a href="/orders/cancel">Cancel current subscription</a>
+<div class="newOrder">
+	<div class="main container container-fluid">
+		<h2>Choose your box</h2>
+		
+		<form:form action="/orders" method="post" modelAttribute="order">
+			<div class="card-deck">
+				<div class="card">
+					<img class="card-img-top" alt="open-box" src="Pictures/open-box.jpg" style="width:100%">
+					<div class="card-body">
+						<h5 class="card-title">Produce Box</h5>
+						<p class="card-text">A box of assorted fruits and vegetables</p>
+						<form:radiobutton value="produce" path="boxType"/>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" alt="fresh-food" src="Pictures/fresh-food.jpg" style="width:100%">
+					<div class="card-body">
+						<h5 class="card-title">Mix Box</h5>
+						<p class="card-text">A box with a mix of meats, dairy, and produce</p>
+						<form:radiobutton value="mixed" path="boxType"/>
+					</div>
+				</div>
+				<div class="card">
+					<div class="meatdairy">
+					<img class="card-img-top" alt="meat-dairy" src="Pictures/meat-dairy-box.jpg" style="width:100%">
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Meat and Dairy Box</h5>
+						<p class="card-text">A box of assorted meats and dairy</p>
+						<form:radiobutton value="meat" path="boxType"/>
+					</div>
+				</div>
+				
+			</div>
+			<div>
+				<form:label path="boxCount">Amount of Boxes</form:label>
+				<form:select path="boxCount">
+					<form:option value="1">1</form:option>
+					<form:option value="2">2</form:option>
+					<form:option value="3">3</form:option>
+					<form:option value="4">4</form:option>
+				</form:select>
+			</div>
+			<button>Place Order!</button>
+		</form:form>
 	</div>
-	
-	<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">Box Type</th>
-				<th scope="col">Amount of Boxes</th>
-				<th scope="col">Date Ordered</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${user.getOrders()}" var="order">
-				<tr>
-					<td><c:out value="${order.getBoxType()}"/></td>
-					<td><c:out value="${order.getBoxCount()}"/></td>
-					<td><c:out value="${order.getCreatedAt()}"/></td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
 </div>
 
-<div class="footer">
-		<div class = "image stubs">
-			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="github" src="Pictures/github.png">
-			<a href="">Github</a>
-		</div>
-	</div>
-	
 </body>
 </html>
