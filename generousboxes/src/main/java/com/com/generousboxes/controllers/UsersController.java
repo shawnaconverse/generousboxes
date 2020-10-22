@@ -46,7 +46,7 @@ public class UsersController {
 		} else {
 			User registeredUser = userService.registerUser(user);
 			session.setAttribute("uuid", registeredUser.getId());
-			return "redirect:/home";
+			return "redirect:/orders";
 		}
 	}
 	
@@ -61,7 +61,7 @@ public class UsersController {
 		} else {
 			User user = userService.findByEmail(email);
 			session.setAttribute("uuid", user.getId());
-			return "redirect:/home";
+			return "redirect:/orders";
 		}
 		
 	}
@@ -76,7 +76,7 @@ public class UsersController {
 	@GetMapping("/orders")
 	public String orders(HttpSession session, Model model) {
 		if (session.getAttribute("uuid") == null) {
-			return "redirect:/home";
+			return "redirect:/login";
 		} else {
 			Long uuid = (Long) session.getAttribute("uuid");
 			User u = userService.findUserById(uuid);

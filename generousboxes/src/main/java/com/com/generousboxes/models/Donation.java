@@ -24,7 +24,6 @@ public class Donation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Size(min=0)
 	private double donation;
 	
 	@Column(updatable = false)

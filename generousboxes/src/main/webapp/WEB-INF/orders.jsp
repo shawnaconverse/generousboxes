@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,7 @@
 	      <a class="nav-link" href="/orders">Orders</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="/partners">Partners</a>
+	      <a class="nav-link" href="/partners/donate">Partners</a>
 	    </li>
 	    <li class="nav-item">
 	      <a class="nav-link" href="/aboutus">About Us</a>

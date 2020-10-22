@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register Account</title>
+<title>Insert title here</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,12 +14,6 @@
 </head>
 <body>
 <div class="container">
-<br>  <p class="text-center">More bootstrap 4 components on <a href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com</a></p>
-<hr>
-
-
-
-
 
 <div class="card bg-light">
 <article class="card-body mx-auto" style="max-width: 400px;">
@@ -53,6 +47,36 @@
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <form:input path="streetNumber" class="form-control" placeholder="Street Address" type="email"/>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <form:input path="street" class="form-control" placeholder="Street" type="email"/>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <form:input path="city" class="form-control" placeholder="City" type="email"/>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <form:input path="state" class="form-control" placeholder="State" type="email"/>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <form:input path="zipCode" class="form-control" placeholder="Zip Code" type="email"/>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
         <form:input path="password" placeholder="Create password" type="password"/>
@@ -66,7 +90,7 @@
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
     </div> <!-- form-group// -->      
-    <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
+    <p class="text-center">Have an account? <a href="/login">Log In</a> </p>                                                                 
 </form:form>
 </article>
 </div> <!-- card.// -->
@@ -74,16 +98,5 @@
 </div> 
 <!--container end.//-->
 
-<br><br>
-<article class="bg-secondary mb-3">  
-<div class="card-body text-center">
-    <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
-<p class="h5 text-white">Components and templates  <br> for Ecommerce, marketplace, booking websites 
-and product landing pages</p>   <br>
-<p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com  
- <i class="fa fa-window-restore "></i></a></p>
-</div>
-<br><br>
-</article>
 </body>
 </html>

@@ -65,6 +65,10 @@ public class PartnerService {
 		return partnerRepo.save(p);
 	}
 	
+	public Donation createDonation(Donation d) {
+		return donationRepo.save(d);
+	}
+	
 	public List<Donation> findAlldonations() {
 		return donationRepo.findAll();
 	}
