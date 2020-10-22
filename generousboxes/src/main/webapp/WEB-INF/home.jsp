@@ -42,7 +42,7 @@
 	<div>
 		<c:if test="${user != null}">
 			<div>
-				Hello, ${user.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.firstName } | <a href="/orders">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
 		<c:if test="${partner != null }"> 
