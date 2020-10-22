@@ -1,3 +1,4 @@
+<%@ page isErrorPage="true"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -77,9 +78,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="meatdairy">
-					<img class="card-img-top" alt="meat-dairy" src="Pictures/meat-dairy-box.jpg" style="width:100%">
-					</div>
+					<img class="card-img-top" alt="meat-dairy" src="Pictures/meat-dairy.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Meat and Dairy Box</h5>
 						<p class="card-text">A box of assorted meats and dairy</p>

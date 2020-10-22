@@ -86,6 +86,20 @@ public class UsersController {
 		}		
 	}
 	
+	
+	
+	@GetMapping("/orders/new")
+	public String newOrder(@ModelAttribute("order") Order o, HttpSession session, Model model) {
+		if (session.getAttribute("uuid") == null) {
+			return "redirect:/home";
+		} else {
+			Long uuid = (Long) session.getAttribute("uuid");
+			User u = userService.findUserById(uuid);
+			model.addAttribute("user", u);
+			return "new_order.jsp";
+		}
+	}
+	
 	@PostMapping("/orders")
 	public String orders(@Valid @ModelAttribute("order") Order o, BindingResult result, HttpSession session) {
 		if (result.hasErrors()) {
@@ -97,18 +111,6 @@ public class UsersController {
 //			userService.addOrder(uuid, order);
 			userService.subscribe(uuid);
 			return "redirect:/orders";
-		}
-	}
-	
-	@GetMapping("/orders/new")
-	public String newOrder(@ModelAttribute("order") Order o, HttpSession session, Model model) {
-		if (session.getAttribute("uuid") == null) {
-			return "redirect:/home";
-		} else {
-			Long uuid = (Long) session.getAttribute("uuid");
-			User u = userService.findUserById(uuid);
-			model.addAttribute("user", u);
-			return "new_order.jsp";
 		}
 	}
 	

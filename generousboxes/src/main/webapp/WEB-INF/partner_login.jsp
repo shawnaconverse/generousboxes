@@ -4,7 +4,6 @@
 <html>
 <head>
 	<title>Login Page</title>
-   <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
+<div class="wrapper">
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -61,6 +61,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 </html>

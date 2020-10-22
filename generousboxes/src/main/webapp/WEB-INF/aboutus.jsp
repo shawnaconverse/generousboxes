@@ -42,12 +42,12 @@
 	<div>
 		<c:if test="${user != null}">
 			<div>
-				Hello, ${user.name } | <a href="/orders">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.firstName } | <a href="/orders">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
 		<c:if test="${partner != null }"> 
 			<div>
-				Hello, ${partner.name } | <a href="/orders">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${partner.firstName } | <a href="/orders">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 

@@ -55,7 +55,7 @@
 			
 	</div>
 </nav>	
-	
+<div class="newOrder">
 <div class="main container container-fluid col-med-">
 	<div class="d-flex justify-content-between">
 		<a href="/orders/new">Place a new Order!</a>
@@ -81,29 +81,6 @@
 		</tbody>
 	</table>
 </div>
-
-<div class="footer">
-		<div class = "image stubs">
-			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="github" src="Pictures/github.png">
-			<a href="">Github</a>
-		</div>
-	</div>
-	
+</div>	
 </body>
 </html>
