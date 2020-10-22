@@ -75,7 +75,7 @@ public class PartnersController {
 	}
 	
 	@GetMapping("/donate")
-	public String donate(HttpSession session, Model model) {
+	public String donate(@ModelAttribute("donation") Donation d, HttpSession session, Model model) {
 		if (session.getAttribute("upid") != null) {
 			Long upid = (Long) session.getAttribute("upid");
 			Partner p = partnerService.findPartnerById(upid);
@@ -92,19 +92,20 @@ public class PartnersController {
 		Partner p = partnerService.findPartnerById(upid);
 		if (result.hasErrors()) {
 			model.addAttribute("partner", p);
-			return "redirect:new_donation.jsp";
+			return "redirect:donation.jsp";
 		} else {
-			p = partnerService.addDonation(upid, d);
+			d.setPartner(p);
+			partnerService.createDonation(d);
 			return "redirect:/partners/donate";
 		}
 	}
 	
-	@GetMapping("/donate/new")
-	public String newDonation(@ModelAttribute("donation") Donation d, HttpSession session, Model model) {
-		Long upid = (Long) session.getAttribute("upid");
-		Partner p = partnerService.findPartnerById(upid);
-		model.addAttribute("partner", p);
-		return "new_donation.jsp";
-	}
+//	@GetMapping("/donate/new")
+//	public String newDonation(@ModelAttribute("donation") Donation d, HttpSession session, Model model) {
+//		Long upid = (Long) session.getAttribute("upid");
+//		Partner p = partnerService.findPartnerById(upid);
+//		model.addAttribute("partner", p);
+//		return "new_donation.jsp";
+//	}
 	
 }
