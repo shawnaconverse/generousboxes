@@ -4,11 +4,11 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html class="orders">
 <head>
 <meta charset="ISO-8859-1">
 <title>Generous Boxes</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -56,13 +56,15 @@
 	</div>
 </nav>	
 <div class="newOrder">
-	<div class="main container container-fluid">
-		<h2>Choose your box</h2>
-		
+	<div class="main container">
+		<div class="row">
+			<h2>Choose your box</h2>
+		</div>
+		<div class="row">
 		<form:form action="/orders" method="post" modelAttribute="order">
 			<div class="card-deck">
 				<div class="card">
-					<img class="card-img-top" alt="open-box" src="Pictures/open-box.jpg" style="width:100%">
+					<img class="card-img-top" alt="open-box" src="/Pictures/open-box.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Produce Box</h5>
 						<p class="card-text">An assortment of meats and dairy</p>
@@ -70,7 +72,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img class="card-img-top" alt="fresh-food" src="Pictures/fresh-food.jpg" style="width:100%">
+					<img class="card-img-top" alt="fresh-food" src="/Pictures/fresh-food.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Mix Box</h5>
 						<p class="card-text">A box of meats, dairy, and produce</p>
@@ -78,14 +80,14 @@
 					</div>
 				</div>
 				<div class="card">
-					<img class="card-img-top" alt="meat-dairy" src="Pictures/meat-dairy.jpg" style="width:100%">
+					<img class="card-img-top" alt="meat-dairy" src="/Pictures/meat-dairy.jpg" style="width:100%">
 					<div class="card-body">
 						<h5 class="card-title">Meat and Dairy Box</h5>
 						<p class="card-text">A box of assorted meats and dairy</p>
 						<form:radiobutton value="meat" path="boxType"/>
 					</div>
 				</div>
-				
+			</div>
 			</div>
 			<div>
 				<form:label path="boxCount">Amount of Boxes</form:label>
