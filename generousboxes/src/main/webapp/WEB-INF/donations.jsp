@@ -43,7 +43,7 @@
 		</c:if>
 		<c:if test="${partner != null }"> 
 			<div>
-				Hello, ${partner.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${partner.firstName } | <a href="/logout">Logout</a>
 			</div>
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
@@ -54,9 +54,9 @@
 			
 	</div>
 </nav>	
+
 	<div class="main container container-fluid col-med-">
-<!-- 		<a href="/orders/cancel">Cancel current subscription</a> -->
-	
+<!-- 		<a href="/orders/cancel">Cancel current subscription</a> -->	
 		<table class="table">
 			<thead>
 				<tr>
@@ -82,31 +82,6 @@
 			<form:errors path="donation.*"/>
 		</form:form>
 	</div>
-	
-<!-- 	DONATION OPTION HERE -->
-	</div>
-	
-	<div class="footer">
-		<div class = "image stubs">
-			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a> |
-		</div>
-		<div class = "image stubs">
-			<img alt="github" src="Pictures/github.png">
-			<a href="">Github</a>
-		</div>
-	</div>
+
 </body>
 </html>
