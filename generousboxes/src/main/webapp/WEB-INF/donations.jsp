@@ -72,19 +72,19 @@
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="instagram" src="Pictures/instagram-logo.png">
-			<a href="">Instagram</a>
+			<a href="">Instagram</a> |
 		</div>
 		<div class = "image stubs">
 			<img alt="twitter" src="Pictures/twitter.png">
-			<a href="">Twitter</a>
+			<a href="">Twitter</a> |
 		</div>
 		<div class = "image stubs">
 			<img alt="facebook" src="Pictures/facebook.jpg">
-			<a href="">Facebook</a>
+			<a href="">Facebook</a> |
 		</div>
 		<div class = "image stubs">
 			<img alt="pintrest" src="Pictures/pintrest.jpg">
-			<a href="">Pintrest</a>
+			<a href="">Pintrest</a> |
 		</div>
 		<div class = "image stubs">
 			<img alt="github" src="Pictures/github.png">
