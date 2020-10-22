@@ -54,7 +54,7 @@
 			
 	</div>
 </nav>	
-	
+	<div class="newOrder">
 	<div class="main container container-fluid">
 		<h2>Choose your box</h2>
 		
@@ -77,7 +77,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img alt="produce-box" src="Pictures/fresh-VeggiesAndFruit.jpg">
+					<img alt="meat-dairy" src="Pictures/meat-dairy-box.jpg">
 					<div class="card-body">
 						<h5 class="card-title">Meat and Dairy Box</h5>
 						<p class="card-text">A box of assorted meats and dairy</p>
@@ -98,6 +98,7 @@
 			<button>Place Order!</button>
 		</form:form>
 	</div>
+	
 	
 	
 	<div class="footer">
@@ -122,6 +123,6 @@
 			<a href="">Github</a>
 		</div>
 	</div>
-	
+	</div>
 </body>
 </html>
