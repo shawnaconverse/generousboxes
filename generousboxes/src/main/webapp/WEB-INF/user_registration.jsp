@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Register</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -49,31 +49,31 @@
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
 		 </div>
-        <form:input path="streetNumber" class="form-control" placeholder="Street Address" type="email"/>
+        <form:input path="streetNumber" class="form-control" placeholder="Street Address" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
 		 </div>
-        <form:input path="street" class="form-control" placeholder="Street" type="email"/>
+        <form:input path="street" class="form-control" placeholder="Street" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
 		 </div>
-        <form:input path="city" class="form-control" placeholder="City" type="email"/>
+        <form:input path="city" class="form-control" placeholder="City" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
 		 </div>
-        <form:input path="state" class="form-control" placeholder="State" type="email"/>
+        <form:input path="state" class="form-control" placeholder="State" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
 		 </div>
-        <form:input path="zipCode" class="form-control" placeholder="Zip Code" type="email"/>
+        <form:input path="zipCode" class="form-control" placeholder="Zip Code" type="text"/>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">

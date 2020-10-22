@@ -69,6 +69,7 @@ public class UsersController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.setAttribute("uuid", null);
+		session.setAttribute("upid", null);
 		return "redirect:/home";
 	}
 	

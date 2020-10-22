@@ -42,12 +42,12 @@
 	<div>
 		<c:if test="${user != null}">
 			<div>
-				Hello, ${user.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${user.firstName} | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>
 		<c:if test="${partner != null }"> 
 			<div>
-				Hello, ${partner.name } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
+				Hello, ${partner.firstName } | <a href="/store">Store</a> | <a href="/logout">Logout</a>
 			</div>
 		</c:if>	
 		<c:if test="${partner == null && user == null}"> 
@@ -58,31 +58,32 @@
 			
 	</div>
 </nav>	
-	<div style="width:100%;height:400px;">
-  		<img alt="happy-boxes" src="Pictures/happy-boxes.jpg" style="float:left;width:60%;height:100%;object-fit:cover;">
-  		<img alt="produce-box" src="Pictures/produce-box.jpg" style="float:left;width:40%;height:100%;object-fit:cover;">
-	</div>
+	
 </div>
-		
+	<div>
 		<!-- Donation Img -->
 	<div class = "aboutUsText">
 		<div>
-			<h1>Our Mission</h1>
-			<h4>Hungry Affects Millions</h4>
-			<ul><p>Even in the worlds greatest food-producing nation, children and adults face poverty and hunger in every county across America.</ul></p>
-			<ul><p>In 2019, 34 million people lived in poverty in America. Four a family of four, that means earning just $25,000 per year.</p></ul>
-			<ul><p>Before the coronavirus pandemic, more than 35 million people struggled with hunger in the United States.</p></ul>
-			<ul><p>A household that is food insecure has limited or uncertain access to enough food to support a healthy life.</p></ul>
-			<h4>We have sustainable solutions</h4>
-			<ul><p>Partnering with local groups and green companies to provide healthy alternatives.</p></ul>	
-			<ul><p>Free delivery to needy families across the country.</p></ul>
-			<ul><p>Fresh produce from farms for cheaper pricing and healthier meals.</p></ul>
-			<ul><p></ul>
-		</div>
-		<div style="width:50%;height:450px;">
-  			<img alt="dairy-products" src="Pictures/dairy-products.jpg" style="float:right;width:90%;height:100%;object-fit:cover;">
+			<h2>Charity of the Month: Catholic Charities</h2>
+			<ul><p>We have recently partnered with Cathoic Charities, from  Archdiocese of NewYork, to begin feeding thousands of New York Residents. Through a network of administered, sponsored and affiliated agencies, Catholic Charities delivers, coordinates, and advocates for quality human services and programs touching almost every human need.The neglected child, the homeless family and the hungry senior are among those for whom we provide help and create hope. We rebuild lives and touch almost every human need promptly, locally, day in and day out, always with compassion and dignity. We help your neighbors as you would like to be helped if your family were in need. A household that is food insecure has limited or uncertain access to enough food to support a healthy life.</p></u>
 		</div>
 	</div>
+	<div style="width:75%;height:500px;">
+		<img alt="cathoicCharities" src="Pictures/catholicCharities.png" style="float:right;width:100%;height:90%;object-fit:cover;">
+	</div>
+</div>
+<div>
+<div class = "charitylist">
+		<div>
+			<h2>We are grateful for every partner, family, and charity who joins us to fight against hunger.</h2>
+			<h2>We will continue to help feed families along with our ongoing partners and charities.</h2>
+		</div>
+</div>
+<div style="width:100%;height:200px;">
+  	<img alt="orangeCountyBank" src="Pictures/orangeCountyBank.png" style="float:left;width:25%;height:95%;object-fit:contain;">
+  	<img alt="end-poverty" src="Pictures/end-poverty.png" style="float:left;width:75%;height:95%;object-fit:contain;">
+</div>
+
 	<div class="footer">
 		<div class = "image stubs">
 			<img alt="instagram" src="Pictures/instagram-logo.png">
