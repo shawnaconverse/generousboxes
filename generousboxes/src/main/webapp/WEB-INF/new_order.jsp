@@ -61,7 +61,7 @@
 		<form:form action="/orders" method="post" modelAttribute="order">
 			<div class="card-deck">
 				<div class="card">
-					<img alt="produce-box" src="Pictures/fresh-VeggiesAndFruit.jpg">
+					<img alt="veggiesAndFruit" src="Pictures/fresh-VeggiesAndFruit.jpg">
 					<div class="card-body">
 						<h5 class="card-title">Produce Box</h5>
 						<p class="card-text">A box of assorted fruits and vegetables</p>
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 				<div class="card">
-					<img alt="produce-box" src="Pictures/fresh-food.jpg">
+					<img alt="fresh-food" src="Pictures/fresh-food.jpg">
 					<div class="card-body">
 						<h5 class="card-title">Mix Box</h5>
 						<p class="card-text">A box with a mix of meats, dairy, and produce</p>
